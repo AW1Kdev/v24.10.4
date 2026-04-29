@@ -9,12 +9,12 @@ src/gz dotywrt_packages https://raw.githubusercontent.com/dotywrt/XRPI5/refs/hea
 EOF
  
 cat > /etc/opkg/distfeeds.conf << 'EOF'
-src/gz immortalwrt_core https://mirror.nju.edu.cn/immortalwrt/releases/24.10.6/targets/bcm27xx/bcm2712/packages
-src/gz immortalwrt_base https://mirror.nju.edu.cn/immortalwrt/releases/24.10.6/packages/aarch64_cortex-a76/base
-src/gz immortalwrt_luci https://mirror.nju.edu.cn/immortalwrt/releases/24.10.6/packages/aarch64_cortex-a76/luci
-src/gz immortalwrt_packages https://mirror.nju.edu.cn/immortalwrt/releases/24.10.6/packages/aarch64_cortex-a76/packages
-src/gz immortalwrt_routing https://mirror.nju.edu.cn/immortalwrt/releases/24.10.6/packages/aarch64_cortex-a76/routing
-src/gz immortalwrt_telephony https://mirror.nju.edu.cn/immortalwrt/releases/24.10.6/packages/aarch64_cortex-a76/telephony
+src/gz immortalwrt_core https://mirror.nju.edu.cn/immortalwrt/releases/24.10.4/targets/bcm27xx/bcm2712/packages
+src/gz immortalwrt_base https://mirror.nju.edu.cn/immortalwrt/releases/24.10.4/packages/aarch64_cortex-a76/base
+src/gz immortalwrt_luci https://mirror.nju.edu.cn/immortalwrt/releases/24.10.4/packages/aarch64_cortex-a76/luci
+src/gz immortalwrt_packages https://mirror.nju.edu.cn/immortalwrt/releases/24.10.4/packages/aarch64_cortex-a76/packages
+src/gz immortalwrt_routing https://mirror.nju.edu.cn/immortalwrt/releases/24.10.4/packages/aarch64_cortex-a76/routing
+src/gz immortalwrt_telephony https://mirror.nju.edu.cn/immortalwrt/releases/24.10.4/packages/aarch64_cortex-a76/telephony
 EOF
 
 exit 0
