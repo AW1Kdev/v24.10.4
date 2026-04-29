@@ -1,0 +1,20 @@
+#!/bin/sh
+ 
+cat > /etc/opkg/customfeeds.conf << 'EOF'
+# add your custom package feeds here
+#
+# src/gz example_feed_name http://www.example.com/path/to/files
+src/gz dotywrt_core https://raw.githubusercontent.com/dotywrt/XRPI5/refs/heads/main/base
+src/gz dotywrt_packages https://raw.githubusercontent.com/dotywrt/XRPI5/refs/heads/main/packages
+EOF
+ 
+cat > /etc/opkg/distfeeds.conf << 'EOF'
+src/gz immortalwrt_core https://mirror.nju.edu.cn/immortalwrt/releases/24.10.6/targets/bcm27xx/bcm2712/packages
+src/gz immortalwrt_base https://mirror.nju.edu.cn/immortalwrt/releases/24.10.6/packages/aarch64_cortex-a76/base
+src/gz immortalwrt_luci https://mirror.nju.edu.cn/immortalwrt/releases/24.10.6/packages/aarch64_cortex-a76/luci
+src/gz immortalwrt_packages https://mirror.nju.edu.cn/immortalwrt/releases/24.10.6/packages/aarch64_cortex-a76/packages
+src/gz immortalwrt_routing https://mirror.nju.edu.cn/immortalwrt/releases/24.10.6/packages/aarch64_cortex-a76/routing
+src/gz immortalwrt_telephony https://mirror.nju.edu.cn/immortalwrt/releases/24.10.6/packages/aarch64_cortex-a76/telephony
+EOF
+
+exit 0
