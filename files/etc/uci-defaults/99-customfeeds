@@ -4,8 +4,7 @@ cat > /etc/opkg/customfeeds.conf << 'EOF'
 # add your custom package feeds here
 #
 # src/gz example_feed_name http://www.example.com/path/to/files
-src/gz dotywrt_core https://raw.githubusercontent.com/dotywrt/XRPI5/refs/heads/main/base
-src/gz dotywrt_packages https://raw.githubusercontent.com/dotywrt/XRPI5/refs/heads/main/packages
+src/gz dotywrt_packages https://raw.githubusercontent.com/dotywrt/XRPI5/main/packages 
 EOF
  
 cat > /etc/opkg/distfeeds.conf << 'EOF'
