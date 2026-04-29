@@ -12,8 +12,8 @@ on:
           - "true"
           - "false"
 
-      add_passwall:
-        description: "Add PassWall?"
+      add_bcm:
+        description: "Add Extra Config PI5?"
         required: true
         default: "false"
         type: choice
@@ -22,7 +22,7 @@ on:
           - "false"
 
       add_modem:
-        description: "Add USB 4G/5G modem support? No MHI"
+        description: "Add USB 4G/5G modem support?"
         required: true
         default: "false"
         type: choice
@@ -122,10 +122,10 @@ jobs:
         run: |
           cp RPI5.config .config
 
-      - name: Load PassWall config
-        if: ${{ github.event.inputs.add_passwall == 'true' }}
+      - name: Load Extra PI5 config
+        if: ${{ github.event.inputs.add_bcm == 'true' }}
         run: |
-          cat passwall >> .config
+          cat BCM >> .config
 
       - name: Add USB 4G/5G modem config
         if: ${{ github.event.inputs.add_modem == 'true' }}
