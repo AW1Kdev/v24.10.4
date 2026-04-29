@@ -206,28 +206,13 @@ jobs:
           tag_name: ${{ steps.tag.outputs.tag }}
           name: RPI5 ImmortalWrt Firmware ${{ steps.tag.outputs.tag }}
           body: |
-            Auto build firmware for Raspberry Pi 5.
-
-            LAN IP mode:
-            ${{ github.event.inputs.default_ip_mode }}
-
-            Custom LAN IP:
+            Firmware for Raspberry Pi 5. (4GB)
+            IP:
             ${{ github.event.inputs.default_ip }}
+            Login : root - no passwd
 
-            USB 4G/5G modem support:
-            ${{ github.event.inputs.add_modem }}
-
-            MHI support:
-            Disabled / not included
-
-            Original OpenWrt LAN IP:
-            192.168.1.1
-
-            Target:
-            bcm27xx/bcm2712/rpi-5
-
-            Build tag:
-            ${{ steps.tag.outputs.tag }}
+            WIFI : DOTYWRT - no passwd
+            
           files: |
             bin/targets/bcm27xx/bcm2712/config.buildinfo
             bin/targets/bcm27xx/bcm2712/feeds.buildinfo
